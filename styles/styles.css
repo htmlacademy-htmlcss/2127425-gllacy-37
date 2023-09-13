@@ -76,6 +76,11 @@ body {
   flex-grow: 1;
 }
 
+.main-page-index {
+  display: grid;
+  gap: 80px;
+}
+
 .list-reset {
   margin: 0;
   padding: 0;
@@ -148,7 +153,14 @@ img {
 
 .navigation {
   display: flex;
-  gap: 32px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
 .navigation-logo {
@@ -164,7 +176,6 @@ img {
 
 .navigation-list {
   display: flex;
-  gap: 32px;
   align-items: center;
 }
 
@@ -173,55 +184,75 @@ img {
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
+  padding: 0 16px;
 }
 
-.navigation-catalog-container {
+.dropdown-container {
   display: none;
 }
 
 .navigation-user-list {
   display: flex;
-  gap: 32px;
+  gap: 16px;
   align-items: center;
 }
 
 .navigation-user-link {
+  display: block;
   font-family: inherit;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+  padding: 8px;
 }
 
-.phone-link {
+.navigation-phone {
+  font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  text-transform: ;
 }
 
-.navigation-user-search-container {
-  display: none;
+.navigation-user-ico {
+  padding-top: 2px;
 }
 
 /*КОРЗИНА*/
 
-.basket-container {
+.dropdown-basket-full .basket-content-full,
+.dropdown-basket-empty .basket-content-empty {
+  display: block;
+}
+
+.basket-content {
   display: none;
 }
 
 /*СЛАЙДЕР*/
 
-.slider-item-inactive {
-  display: none;
+.slider {
+  position: relative;
+}
+
+.slider-list {
+  display: flex;
+  align-items: center;
+  gap: 37px;
 }
 
 .slider-item-active {
   display: grid;
-  grid-template-columns: 500px 1fr;
+  grid-template-columns: 500px 367px 1fr;
+  gap: 26px;
 }
 
 .slider-content {
   margin-left: 70px;
+}
+
+.slider-image-container {
+  display: block;
+  text-align: center;
 }
 
 .slider-title {
@@ -240,12 +271,21 @@ img {
   margin: 0 0 48px;
 }
 
-.slider-image-list {
+.slider-arrow-controls {
+  position: relative;
+  left: 500px;
+  bottom: 250px;
   display: flex;
+  gap: 300px;
 }
 
-.slider-image-min {
-  margin: 204px 0 200px;
+.slider-arrow {
+  border: none;
+  background-color: transparent;
+}
+
+.button-slider-next {
+  transform: rotate(180deg);
 }
 
 .bullets-list {
@@ -256,7 +296,6 @@ img {
 /*ПОДАРКИ*/
 
 .gifts-container {
-  margin-top: 80px;
   text-align: center;
 }
 
@@ -300,7 +339,6 @@ img {
 /*ПОПУЛЯРНОЕ(КАТАЛОГ)*/
 
 .popular-container {
-  margin-top: 80px;
   text-align: center;
 }
 
@@ -311,7 +349,6 @@ img {
 /*ПРЕИМУЩЕСТВА*/
 
 .advantages-container {
-  margin-top: 80px;
   text-align: center;
   padding: 80px 64px;
   background-color: var(--basic-extra-light);
@@ -339,7 +376,6 @@ img {
   background-color: var(--basic-extra-light);
   border-radius: 16px;
   padding: 32.6px 235px 67.2px 32px;
-  margin-top: 80px;
 }
 
 .blog-title-article {
@@ -350,6 +386,10 @@ img {
 }
 
 .blog-title {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
   margin: 0;
   margin-bottom: 12.2px;
 }
@@ -360,7 +400,6 @@ img {
   background-color: var(--basic-extra-light);
   border-radius: 16px;
   padding: 32px 32px 32px 34px;
-  margin-top: 80px;
 }
 
 .mailing-description {
@@ -374,7 +413,6 @@ img {
   display: grid;
   grid-template-columns: 371px 1fr;
   gap: 135px;
-  margin-top: 80px;
   background-color: #f1f1f1;
   border-radius: 16px;
   padding: 64px 64px 64px 100px;
@@ -448,7 +486,6 @@ img {
 /*КОНТАКТЫ*/
 
 .contacts {
-  margin-top: 80px;
   background-color: #f1f1f1;
   border-radius: 16px;
   padding: 64px 763px 64px 64px;
@@ -496,8 +533,8 @@ img {
 
 .footer-page {
   display: grid;
-  grid-template-columns: 104px 356px 193px;
-  gap: 259px;
+  grid-template-columns: 108px 356px 193px;
+  gap: 256px;
   padding: 48px 0 48px;
 }
 
@@ -505,7 +542,7 @@ img {
   display: grid;
   justify-content: start;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 12px;
 }
 
 .footer-menu-list {
