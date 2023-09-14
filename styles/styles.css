@@ -271,12 +271,13 @@ img {
   margin: 0 0 48px;
 }
 
-.slider-arrow-controls {
+.slider-arrow-container {
   position: relative;
-  left: 500px;
+  width: 343px;
+  left: 530px;
   bottom: 250px;
   display: flex;
-  gap: 300px;
+  justify-content: space-between;
 }
 
 .slider-arrow {
@@ -288,9 +289,35 @@ img {
   transform: rotate(180deg);
 }
 
+.slider-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .bullets-list {
   display: flex;
   gap: 8px;
+}
+
+.bullets-link {
+  width: 12px;
+  height: 12px;
+  border-radius: 100px;
+  border: none;
+  background-color: var(--basic-extra-light);
+}
+
+.bullets-link {
+  width: 12px;
+  height: 12px;
+  border-radius: 100px;
+  border: none;
+  background-color: var(--basic-extra-light);
+  opacity: 0.3;
+}
+
+.bullets-link-active {
+  opacity: 1;
 }
 
 /*ПОДАРКИ*/
@@ -316,7 +343,17 @@ img {
   gap: 28px;
   padding: 36px 217px 36px 36px;
   background-color: #F79;
+  background-repeat: no-repeat;
+  background-position: right;
   border-radius: 16px;
+}
+
+.gifts-item-raspberry {
+  background-image: url(../images/raspberry-gift.png);
+}
+
+.gifts-item-marshmallow {
+  background-image: url(../images/marshmallow-gift.png);
 }
 
 .gifts-item-title {
@@ -350,9 +387,19 @@ img {
 
 .advantages-container {
   text-align: center;
-  padding: 80px 64px;
-  background-color: var(--basic-extra-light);
   border-radius: 16px;
+  background-image: url(../images/waffle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 24px;
+}
+
+.advantages-wrapper {
+  background-color: var(--basic-white);
+  border-radius: 16px;
+  text-align: center;
+  width: 1122px;
+  padding: 56px 40px;
 }
 
 .advantages-title {
@@ -370,10 +417,16 @@ img {
   text-align: start;
 }
 
+.promo-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
 /*НОВОЕ В БЛОГЕ*/
 
-.blog-container {
-  background-color: var(--basic-extra-light);
+.blog {
+  background-color: var(--basic-white);
   border-radius: 16px;
   padding: 32.6px 235px 67.2px 32px;
 }
@@ -396,8 +449,8 @@ img {
 
 /*ПОДПИСКА*/
 
-.mailing-container {
-  background-color: var(--basic-extra-light);
+.mailing {
+  background-color: var(--basic-white);
   border-radius: 16px;
   padding: 32px 32px 32px 34px;
 }
@@ -405,6 +458,25 @@ img {
 .mailing-description {
   margin: 0;
   margin-bottom: 42px;
+}
+
+.mailing-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.mailing-form-input {
+  padding: 14px 90px 14px 16px;
+  color: var(--basic-neutral);
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--basic-neutral);
+  background: var(--basic-white);
 }
 
 /*ДОСТАВКА*/
@@ -416,6 +488,21 @@ img {
   background-color: #f1f1f1;
   border-radius: 16px;
   padding: 64px 64px 64px 100px;
+}
+
+.delivery-form-tooltip {
+  display: flex;
+  gap: 4px;
+}
+
+.delivery-tooltip {
+  position: relative;
+}
+
+.delivery-tooltip-text {
+  position: absolute;
+  z-index: 1;
+  display: none;
 }
 
 .delivery-title {
@@ -457,7 +544,7 @@ img {
 .delivery-form-input {
   margin: 0;
   margin-top: 8px;
-  padding: 14px 15px;
+  padding: 13px 15px;
   text-align: start;
   font-family: var(--font-inter);
   color: var(--basic-neutral);
@@ -502,6 +589,9 @@ img {
 
 .contacts-description {
   font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
   color: var(--basic-dark);
   margin: 0;
   margin-bottom: 12px;
@@ -512,6 +602,7 @@ img {
   font-family: inherit;
   font-size: 20px;
   font-weight: 700;
+  font-style: normal;
   line-height: 24px;
   color: var(--basic-extra-dark);
   margin: 0;
@@ -545,20 +636,20 @@ img {
   gap: 12px;
 }
 
-.footer-menu-list {
+.footer-info-list {
   display: grid;
   grid-template-columns: 150px 182px;
   gap: 8px 24px;
 }
 
-.footer-menu-item {
+.footer-info-item {
   font-family: inherit;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
 }
 
-.footer-menu-item-suppliers {
+.footer-info-item-suppliers {
   font-weight: 700;
 }
 
@@ -648,6 +739,7 @@ img {
 
 .product-card-image {
   padding: 0 11px 16px 11px;
+  margin: 0;
 }
 
 .product-card-title {
@@ -669,6 +761,12 @@ img {
   margin-bottom: 16px;
 }
 
+.product-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .product-card-price {
   font-family: inherit;
   font-size: 20px;
@@ -679,11 +777,12 @@ img {
 }
 
 .product-card-button {
+  display: block;
   background-color: var(--special-extra-bright);
+  padding: 7px;
   border-radius: 50%;
   width: 32px;
   height: 32px;
-  border: none;
   cursor: pointer;
 }
 

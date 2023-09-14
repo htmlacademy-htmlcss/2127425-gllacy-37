@@ -253,7 +253,7 @@
               </li>
             </ul>
 
-            <div class="slider-arrow-controls">
+            <div class="slider-arrow-container">
               <button class="slider-arrow button-slider-prev" type="button" aria-label="Вернуться к предыдущему товару">
                 <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="39"
                   height="38" fill="none">
@@ -285,7 +285,7 @@
               <div class="slider-bullets bullets">
                 <ul class="bullets-list list-reset" aria-label="Страницы каталога популярных товаров">
                   <li class="bullets-item">
-                    <button class="bullets-link" type="button">
+                    <button class="bullets-link bullets-link-active" type="button">
                       <span class="visually-hidden">Товар 1.</span>
                     </button>
                   </li>
@@ -295,7 +295,7 @@
                     </button>
                   </li>
                   <li class="bullets-item">
-                    <button class="bullets-link bullets-link-active" type="button">
+                    <button class="bullets-link" type="button">
                       <span class="visually-hidden">Товар 3.</span>
                     </button>
                   </li>
@@ -355,19 +355,19 @@
             <h2 class="gifts-title title">Заказывайте мороженое<br> и получайте подарки!</h2>
 
             <ul class="gifts-list list-reset">
-              <li class="gifts-item">
+              <li class="gifts-item gifts-item-raspberry">
                 <h3 class="gifts-item-title">Малинка даром!</h3>
                 <p class="gifts-item-description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ<br>
                   банку
                   малинового варенья бесплатно.</p>
-                <button class="gifts-button button" type="button">Хочу подарок</button>
+                <a class="gifts-button button" type="button">Хочу подарок</a>
               </li>
-              <li class="gifts-item">
+              <li class="gifts-item gifts-item-marshmallow">
                 <h3 class="gifts-item-title">Маршмеллоу даром!</h3>
                 <p class="gifts-item-description">При покупке 2 кг пломбира добавим<br> в ваш заказ упаковку нежных
                   зефирок
                   совершенно бесплатно.</p>
-                <button class="gifts-button button" type="button">Хочу подарок</button>
+                <a class="gifts-button button" type="button">Хочу подарок</a>
               </li>
             </ul>
           </div>
@@ -380,60 +380,100 @@
 
             <ul class="product-list list-reset">
               <li class="product-card-item">
-                <a class="product-card-link link" href="#">
-                  <div class="product-card-image">
-                    <img src="images/catalog/product-1.png" width="168" height="168"
-                      alt="Сливочное мороженое с малиновым джемом.">
+                <div class="product-item-container">
+                  <a class="product-card-link link" href="#">
+                    <figure class="product-card-image">
+                      <img src="images/catalog/product-1.png" width="168" height="168"
+                        alt="Сливочное мороженое с малиновым джемом.">
+                    </figure>
+                    <h3 class="product-card-title">Малинка</h3>
+                  </a>
+                  <p class="product-card-description">Сливочное мороженое<br> с малиновым джемом</p>
+                  <div class="product-wrapper">
+                    <span class="product-card-price">310&nbsp;₽&nbsp;/&nbsp;кг</span>
+                    <a class="product-card-button" href="#">
+                      <span class="visually-hidden">Добавить в корзину</span>
+                      <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="none">
+                        <path fill="#FCFCFC" fill-rule="evenodd"
+                          d="M1.1667 1.25a.6667.6667 0 0 0 0 1.3333h1.7712l.4675 2.3354a.664.664 0 0 0 .0106.0531l.9674 4.8333.0001.0006a1.8254 1.8254 0 0 0 1.8183 1.4691h5.6207a1.8256 1.8256 0 0 0 1.8185-1.4697l.001-.005.9271-4.8614a.6669.6669 0 0 0-.6549-.7915H4.6107l-.4726-2.3614a.6667.6667 0 0 0-.6537-.5358H1.1667ZM5.691 9.5444l-.8134-4.0639h8.2308l-.7756 4.0669a.4923.4923 0 0 1-.4918.3942v-.0001H6.1962v-.0001l-.0128.0002a.4922.4922 0 0 1-.4922-.3962l-.0002-.001Zm-1.1336 3.961c0-.6879.5577-1.2457 1.2457-1.2457.688 0 1.2457.5578 1.2457 1.2457 0 .688-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5577-1.2457-1.2457Zm6.3733 0c0-.6879.5577-1.2457 1.2457-1.2457.688 0 1.2457.5578 1.2457 1.2457 0 .688-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5577-1.2457-1.2457Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </a>
                   </div>
-                  <h3 class="product-card-title">Малинка</h3>
-                </a>
-                <p class="product-card-description">Сливочное мороженое<br> с малиновым джемом</p>
-                <span class="product-card-price">310&nbsp;₽&nbsp;/&nbsp;кг</span>
-                <button class="product-card-button" type="button">
-                  <span class="visually-hidden">Добавить в корзину</span>
-                </button>
+                </div>
               </li>
               <li class="product-card-item">
-                <a class="product-card-link link" href="#">
-                  <div class="product-card-image">
-                    <img src="images/catalog/product-2.png" width="168" height="168"
-                      alt="Фисташковый пломбир с кусочками шоколада.">
+                <div class="product-item-container">
+                  <a class="product-card-link link" href="#">
+                    <figure class="product-card-image">
+                      <img src="images/catalog/product-2.png" width="168" height="168"
+                        alt="Фисташковый пломбир с кусочками шоколада.">
+                    </figure>
+                    <h3 class="product-card-title">Фисташка</h3>
+                  </a>
+                  <p class="product-card-description">Фисташковый пломбир<br> с кусочками шоколада</p>
+                  <div class="product-wrapper">
+                    <span class="product-card-price">340&nbsp;₽&nbsp;/&nbsp;кг</span>
+                    <a class="product-card-button" href="#">
+                      <span class="visually-hidden">Добавить в корзину</span>
+                      <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="none">
+                        <path fill="#FCFCFC" fill-rule="evenodd"
+                          d="M1.1667 1.25a.6667.6667 0 0 0 0 1.3333h1.7712l.4675 2.3354a.664.664 0 0 0 .0106.0531l.9674 4.8333.0001.0006a1.8254 1.8254 0 0 0 1.8183 1.4691h5.6207a1.8256 1.8256 0 0 0 1.8185-1.4697l.001-.005.9271-4.8614a.6669.6669 0 0 0-.6549-.7915H4.6107l-.4726-2.3614a.6667.6667 0 0 0-.6537-.5358H1.1667ZM5.691 9.5444l-.8134-4.0639h8.2308l-.7756 4.0669a.4923.4923 0 0 1-.4918.3942v-.0001H6.1962v-.0001l-.0128.0002a.4922.4922 0 0 1-.4922-.3962l-.0002-.001Zm-1.1336 3.961c0-.6879.5577-1.2457 1.2457-1.2457.688 0 1.2457.5578 1.2457 1.2457 0 .688-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5577-1.2457-1.2457Zm6.3733 0c0-.6879.5577-1.2457 1.2457-1.2457.688 0 1.2457.5578 1.2457 1.2457 0 .688-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5577-1.2457-1.2457Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </a>
                   </div>
-                  <h3 class="product-card-title">Фисташка</h3>
-                </a>
-                <p class="product-card-description">Фисташковый пломбир<br> с кусочками шоколада</p>
-                <span class="product-card-price">340&nbsp;₽&nbsp;/&nbsp;кг</span>
-                <button class="product-card-button" type="button">
-                  <span class="visually-hidden">Добавить в корзину</span>
-                </button>
+                </div>
               </li>
               <li class="product-card-item">
-                <a class="product-card-link link" href="#">
-                  <div class="product-card-image">
-                    <img src="images/catalog/product-3.png" width="168" height="168"
-                      alt="Крем-брюле с черничным джемом.">
+                <div class="product-item-container">
+                  <a class="product-card-link link" href="#">
+                    <figure class="product-card-image">
+                      <img src="images/catalog/product-3.png" width="168" height="168"
+                        alt="Крем-брюле с черничным джемом.">
+                    </figure>
+                    <h3 class="product-card-title">Черника</h3>
+                  </a>
+                  <p class="product-card-description">Крем-брюле<br> с черничным джемом</p>
+                  <div class="product-wrapper">
+                    <span class="product-card-price">330&nbsp;₽&nbsp;/&nbsp;кг</span>
+                    <a class="product-card-button" href="#">
+                      <span class="visually-hidden">Добавить в корзину</span>
+                      <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="none">
+                        <path fill="#FCFCFC" fill-rule="evenodd"
+                          d="M1.1667 1.25a.6667.6667 0 0 0 0 1.3333h1.7712l.4675 2.3354a.664.664 0 0 0 .0106.0531l.9674 4.8333.0001.0006a1.8254 1.8254 0 0 0 1.8183 1.4691h5.6207a1.8256 1.8256 0 0 0 1.8185-1.4697l.001-.005.9271-4.8614a.6669.6669 0 0 0-.6549-.7915H4.6107l-.4726-2.3614a.6667.6667 0 0 0-.6537-.5358H1.1667ZM5.691 9.5444l-.8134-4.0639h8.2308l-.7756 4.0669a.4923.4923 0 0 1-.4918.3942v-.0001H6.1962v-.0001l-.0128.0002a.4922.4922 0 0 1-.4922-.3962l-.0002-.001Zm-1.1336 3.961c0-.6879.5577-1.2457 1.2457-1.2457.688 0 1.2457.5578 1.2457 1.2457 0 .688-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5577-1.2457-1.2457Zm6.3733 0c0-.6879.5577-1.2457 1.2457-1.2457.688 0 1.2457.5578 1.2457 1.2457 0 .688-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5577-1.2457-1.2457Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </a>
                   </div>
-                  <h3 class="product-card-title">Черника</h3>
-                </a>
-                <p class="product-card-description">Крем-брюле<br> с черничным джемом</p>
-                <span class="product-card-price">330&nbsp;₽&nbsp;/&nbsp;кг</span>
-                <button class="product-card-button" type="button">
-                  <span class="visually-hidden">Добавить в корзину</span>
-                </button>
+                </div>
               </li>
               <li class="product-card-item">
-                <a class="product-card-link link" href="#">
-                  <div class="product-card-image">
-                    <img src="images/catalog/product-4.png" width="168" height="168"
-                      alt="Ванильный пломбир со сладкой посыпкой.">
+                <div class="product-item-container">
+                  <a class="product-card-link link" href="#">
+                    <figure class="product-card-image">
+                      <img src="images/catalog/product-4.png" width="168" height="168"
+                        alt="Ванильный пломбир со сладкой посыпкой.">
+                    </figure>
+                    <h3 class="product-card-title">Бабл-гам</h3>
+                  </a>
+                  <p class="product-card-description">Ванильный пломбир<br> со сладкой посыпкой</p>
+                  <div class="product-wrapper">
+                    <span class="product-card-price">320&nbsp;₽&nbsp;/&nbsp;кг</span>
+                    <a class="product-card-button" href="#">
+                      <span class="visually-hidden">Добавить в корзину</span>
+                      <svg aria-hidden="true" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="none">
+                        <path fill="#FCFCFC" fill-rule="evenodd"
+                          d="M1.1667 1.25a.6667.6667 0 0 0 0 1.3333h1.7712l.4675 2.3354a.664.664 0 0 0 .0106.0531l.9674 4.8333.0001.0006a1.8254 1.8254 0 0 0 1.8183 1.4691h5.6207a1.8256 1.8256 0 0 0 1.8185-1.4697l.001-.005.9271-4.8614a.6669.6669 0 0 0-.6549-.7915H4.6107l-.4726-2.3614a.6667.6667 0 0 0-.6537-.5358H1.1667ZM5.691 9.5444l-.8134-4.0639h8.2308l-.7756 4.0669a.4923.4923 0 0 1-.4918.3942v-.0001H6.1962v-.0001l-.0128.0002a.4922.4922 0 0 1-.4922-.3962l-.0002-.001Zm-1.1336 3.961c0-.6879.5577-1.2457 1.2457-1.2457.688 0 1.2457.5578 1.2457 1.2457 0 .688-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5577-1.2457-1.2457Zm6.3733 0c0-.6879.5577-1.2457 1.2457-1.2457.688 0 1.2457.5578 1.2457 1.2457 0 .688-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5577-1.2457-1.2457Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </a>
                   </div>
-                  <h3 class="product-card-title">Бабл-гам</h3>
-                </a>
-                <p class="product-card-description">Ванильный пломбир<br> со сладкой посыпкой</p>
-                <span class="product-card-price">320&nbsp;₽&nbsp;/&nbsp;кг</span>
-                <button class="product-card-button" type="button">
-                  <span class="visually-hidden">Добавить в корзину</span>
-                </button>
+                </div>
               </li>
             </ul>
           </div>
@@ -442,55 +482,68 @@
         <!--ПРЕИМУЩЕСТВА-->
         <section class="advantages">
           <div class="advantages-container container">
-            <h2 class="advantages-title title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого
-              собственного
-              производства на развес</h2>
+            <div class="advantages-wrapper">
+              <h2 class="advantages-title title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого
+                собственного
+                производства на развес</h2>
 
-            <ul class="advantages-list list-reset">
-              <li class="advantages-item">
-                <p class="advantages-description">Всё наше мороженое изготавливается на собственном производстве с
-                  использованием современного оборудования и проверенных временем технологий.</p>
-              </li>
-              <li class="advantages-item">
-                <p class="advantages-description">Для приготовления мороженого используются сливки и молоко высочайшего
-                  качества. Все ингредиенты и добавки произведены из натурального сырья.</p>
-              </li>
-              <li class="advantages-item">
-                <p class="advantages-description">Закупка ингредиентов производится только у проверенных фермерских
-                  хозяйств, с которыми нас связывает долговременное сотрудничество.</p>
-              </li>
-              <li class="advantages-item">
-                <p class="advantages-description">Доставка нашего мороженого осуществляется в специальном термопаке,
-                  который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</p>
-              </li>
-            </ul>
+              <ul class="advantages-list list-reset">
+                <li class="advantages-item">
+                  <p class="advantages-description advantages-description-ice-cream">Всё наше мороженое изготавливается
+                    на
+                    собственном производстве с
+                    использованием современного оборудования и проверенных временем технологий.</p>
+                </li>
+                <li class="advantages-item">
+                  <p class="advantages-description advantages-description-cow">Для приготовления мороженого
+                    используются сливки и молоко высочайшего
+                    качества. Все ингредиенты и добавки произведены из натурального сырья.</p>
+                </li>
+                <li class="advantages-item">
+                  <p class="advantages-description advantages-description-sheet">Закупка ингредиентов производится
+                    только у проверенных фермерских
+                    хозяйств, с которыми нас связывает долговременное сотрудничество.</p>
+                </li>
+                <li class="advantages-item">
+                  <p class="advantages-description advantages-description-thermometer">Доставка нашего мороженого
+                    осуществляется в специальном термопаке,
+                    который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        <!--НОВОЕ В БЛОГЕ-->
-        <article class="blog">
-          <div class="blog-container container">
-            <h2 class="blog-title">Новое в нашем блоге</h2>
-            <a class="blog-title-article title link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+        <div class="promo">
+          <div class="promo-container container">
+            <!--НОВОЕ В БЛОГЕ-->
+            <article class="blog">
+              <h2 class="blog-title">Новое в нашем блоге</h2>
+              <a class="blog-title-article title link" href="#">10 способов сервировки фруктовых щербетов
+                к&nbsp;столу</a>
+            </article>
+
+            <!--ПОДПИСКА-->
+            <section class="mailing">
+
+              <div class="mailing-wrapper">
+                <h2 class="visually-hidden">Подпишитесь на рассылку</h2>
+                <p class="mailing-description">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего
+                  самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+                </p>
+
+                <form class="mailing-form" action="https://echo.htmlacademy.ru" method="post">
+                  <label class="mailing-form-label">
+                    <input class="mailing-form-input" type="email" name="subscribe" placeholder="email@example.com"
+                      required>
+                  </label>
+                  <button class="mailing-form-button button button-dark" type="submit">Отправить</button>
+                </form>
+              </div>
+
+            </section>
           </div>
-        </article>
-
-        <!--ПОДПИСКА-->
-        <section class="mailing">
-
-          <div class="mailing-container container">
-            <h2 class="visually-hidden">Подпишитесь на рассылку</h2>
-            <p class="mailing-description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего
-              самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-
-            <form class="mailing-form" action="https://echo.htmlacademy.ru" method="post">
-              <label class="mailing-form-label">
-                <input class="mailing-form-input" type="email" name="email" placeholder="email@example.com" required>
-              </label>
-              <button class="mailing-form-button button button-dark" type="submit">Отправить</button>
-            </form>
-          </div>
-        </section>
+        </div>
 
         <!--ДОСТАВКА-->
         <section class="delivery">
@@ -498,7 +551,7 @@
           <div class="delivery-container container">
             <div class="delivery-content">
               <h2 class="delivery-title title">Доставка любимого мороженого на дом</h2>
-              <p class="delivery-description">Хочется полакомиться любимым десертом,<br> но нет времени съездить в
+              <p class="delivery-description">Хочется полакомиться любимым десертом, но&nbsp;нет времени съездить в
                 магазин?
                 Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
             </div>
@@ -511,7 +564,15 @@
 
                 <div class="delivery-fieldset">
                   <fieldset class="delivery-fieldset-group">
-                    <label class="delivery-form-label" for="date">Дата</label>
+                    <div class="delivery-form-tooltip">
+                      <label class="delivery-form-label" for="date">Дата</label>
+                      <div class="delivery-tooltip">
+                        <button class="delivery-tooltip-toggle" type="button" aria-labelledby="info-label-date">
+                          <span class="visually-hidden">Дополнительная информация.</span>
+                        </button>
+                        <p class="delivery-tooltip-text" id="info-label-date">Введите дату доставки</p>
+                      </div>
+                    </div>
                     <input class="delivery-form-input delivery-form-input-date" type="text" id="date"
                       name="delivery-date" placeholder="01.04.2020" required>
                   </fieldset>
@@ -523,7 +584,15 @@
                   </fieldset>
 
                   <fieldset class="delivery-fieldset-group">
-                    <label class="delivery-form-label" for="address">Адрес</label>
+                    <div class="delivery-form-tooltip">
+                      <label class="delivery-form-label" for="address">Адрес</label>
+                      <div class="delivery-tooltip">
+                        <button class="delivery-tooltip-toggle" type="button" aria-labelledby="info-label-address">
+                          <span class="visually-hidden">Дополнительная информация.</span>
+                        </button>
+                        <p class="delivery-tooltip-text" id="info-label-address">Введите адрес доставки</p>
+                      </div>
+                    </div>
                     <input class="delivery-form-input delivery-form-input-address" type="text" id="address"
                       name="address" placeholder="ул. Большая Конюшенная, 19/8" required>
                   </fieldset>
@@ -541,11 +610,11 @@
           <div class="contacts-container">
             <h2 class="visually-hidden">Контактные данные</h2>
             <h3 class="contacts-description">Адрес главного офиса и офлайн-магазина:</h3>
-            <p class="contacts-address">наб. реки Карповки, 5 лит П, Санкт-Петербург</p>
+            <address class="contacts-address">наб. реки Карповки, 5 лит П, Санкт-Петербург</address>
             <h3 class="contacts-description">Для заказов по телефону:</h3>
             <a class="contacts-phone-link link" href="tel:+78128121212">Тел.:+7&nbsp;(812)&nbsp;812-12-12</a>
             <p class="contacts-reference">(с 10 до 20 ежедневно)</p>
-            <button class="contacts-button button button-dark" type="submit">Форма обратной связи</button>
+            <a class="contacts-button button button-dark link" href="#">Форма обратной связи</a>
           </div>
         </section>
       </main>
@@ -597,20 +666,20 @@
           </ul>
         </div>
 
-        <section class="footer-menu">
+        <section class="footer-info">
           <h2 class="visually-hidden">Полезная информация</h2>
-          <ul class="footer-menu-list list-reset">
-            <li class="footer-menu-item footer-menu-item-suppliers">
-              <a href="#" class="footer-menu-link link">Для поставщиков</a>
+          <ul class="footer-info-list list-reset">
+            <li class="footer-info-item footer-info-item-suppliers">
+              <a href="#" class="footer-info-link link">Для поставщиков</a>
             </li>
-            <li class="footer-menu-item">
-              <a href="#" class="footer-menu-link link">О производстве</a>
+            <li class="footer-info-item">
+              <a href="#" class="footer-info-link link">О производстве</a>
             </li>
-            <li class="footer-menu-item">
-              <a href="#" class="footer-menu-link link">Наши документы</a>
+            <li class="footer-info-item">
+              <a href="#" class="footer-info-link link">Наши документы</a>
             </li>
-            <li class="footer-menu-item">
-              <a href="#" class="footer-menu-link link">Экологические стандарты</a>
+            <li class="footer-info-item">
+              <a href="#" class="footer-info-link link">Экологические стандарты</a>
             </li>
           </ul>
         </section>
