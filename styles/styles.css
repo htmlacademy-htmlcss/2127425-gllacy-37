@@ -527,6 +527,7 @@ textarea.form-input {
 .navigation-phone:focus,
 .navigation-phone:focus-visible {
   color: var(--basic-white);
+  outline: none;
 }
 
 .navigation-phone:active {
@@ -804,94 +805,192 @@ textarea.form-input {
 /*СЛАЙДЕР*/
 
 .slider {
-  position: relative;
+  padding-top: 20px;
 }
 
-.slider-list {
-  display: flex;
-  align-items: center;
-  gap: 37px;
-}
-
-.slider-item-active {
+.slider-wrapper {
   display: grid;
-  grid-template-columns: 500px 367px 1fr;
-  gap: 26px;
+  grid-template-columns: auto 1fr;
+}
+
+.slider-content-container {
+  width: 525px;
 }
 
 .slider-content {
-  margin-left: 70px;
+  display: none;
+  padding: 115px 20px 115px 70px;
 }
 
-.slider-image-container {
+.slider-content-active {
   display: block;
-  text-align: center;
 }
 
 .slider-title {
-  font-family: inherit;
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 46px;
-  margin: 136px 0 24px;
-  text-align: left;
+  color: var(--basic-extra-dark);
+  margin: 0 0 24px;
 }
 
 .slider-description {
-  font-family: inherit;
+  color: var(--basic-extra-dark);
   font-size: 18px;
-  font-weight: 400;
   line-height: 24px;
   margin: 0 0 48px;
 }
 
-.slider-arrow-container {
+.slider-control {
   position: relative;
-  width: 343px;
-  left: 530px;
-  bottom: 250px;
+}
+
+.slider-images {
+  display: grid;
+  grid-template-columns: 1fr 100px 100px;
+  gap: 40px;
+  align-items: center;
+}
+
+.slider-image-container {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  opacity: 0.4;
+}
+
+.slider-image-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  background-color: var(--special-exta-light);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slider-image-container img {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.slider-image-container-active {
+  width: 367px;
+  height: 507px;
+  opacity: 1;
+}
+
+.slider-image-container-active::before {
+  width: 327px;
+  height: 312px;
+  opacity: 1;
+}
+
+.slider-arrow-container {
+  position: absolute;
+  width: 365px;
+  top: 50%;
+  left: 0;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
 }
 
 .slider-arrow {
-  border: none;
-  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 38px;
+  height: 38px;
+  color: var(--basic-extra-light);
+  background-color: rgb(252, 252, 252, 0.3);
+  border-radius: 50%;
+  border: 2px solid var(--basic-extra-light);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
 }
 
 .button-slider-next {
   transform: rotate(180deg);
 }
 
-.slider-navigation-bullets {
-  display: flex;
-  justify-content: space-between;
-}
-
-.bullets-list {
-  display: flex;
-  gap: 8px;
-}
-
-.bullets-link {
-  width: 12px;
-  height: 12px;
-  border-radius: 100px;
-  border: none;
+.slider-arrow:hover {
+  color: var(--basic-extra-dark);
   background-color: var(--basic-extra-light);
 }
 
-.bullets-link {
-  width: 12px;
-  height: 12px;
-  border-radius: 100px;
-  border: none;
+.slider-arrow:focus,
+.slider-arrow:focus-visible {
+  color: var(--basic-extra-dark);
   background-color: var(--basic-extra-light);
+  border: 2px solid var(--basic-extra-dark);
+  outline: none;
+}
+
+.slider-arrow:active {
+  background-color: rgba(252, 252, 252, 0.50);
+  border: transparent;
+}
+
+.slider-arrow:disabled {
+  background-color: rgb(252, 252, 252, 0.3);
+  border: 2px solid var(--basic-extra-light);
   opacity: 0.3;
+  pointer-events: none;
 }
 
-.bullets-link-active {
-  opacity: 1;
+.slider-bullets {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: end;
+}
+
+.slider-bullet {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-color: rgba(252, 252, 252, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
+}
+
+.slider-bullet-current {
+  background-color: var(--basic-extra-light);
+  pointer-events: none;
+}
+
+.slider-bullet:hover {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 1px solid var(--basic-extra-light);
+}
+
+.slider-bullet:focus,
+.slider-bullet:focus-visible {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 1px solid var(--basic-extra-dark);
+  outline: none;
+}
+
+.slider-bullet:active {
+  background-color: rgba(252, 252, 252, 0.50);
+  border: transparent;
+}
+
+.slider-bullet:disabled {
+  border: 1px solid var(--basic-extra-light);
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 /*ПОДАРКИ*/
