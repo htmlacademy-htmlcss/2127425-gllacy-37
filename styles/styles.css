@@ -144,6 +144,35 @@ img {
   object-fit: cover;
 }
 
+.logo {
+  display: block;
+  cursor: pointer;
+}
+
+.logo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.logo[aria-current] {
+  pointer-events: none;
+}
+
+.logo:hover {
+  color: var(--special-bright);
+}
+
+.logo:focus,
+.logo:focus-visible {
+  color: var(--basic-white);
+}
+
+.logo:active {
+  color: var(--special-bright);
+  opacity: 0.5;
+}
+
 .button {
   position: relative;
   display: inline-block;
@@ -334,43 +363,14 @@ textarea.form-input {
 
 .navigation {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: 137px repeat(2, auto) 267px;
   gap: 18px;
   align-items: start;
 }
 
-.logo {
-  display: block;
+.navigation-logo {
   width: 137px;
   height: 56px;
-}
-
-.navigation-logo {
-  cursor: pointer;
-}
-
-.logo svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.logo[aria-current] {
-  pointer-events: none;
-}
-
-.logo:hover {
-  color: var(--special-bright);
-}
-
-.logo:focus,
-.logo:focus-visible {
-  color: var(--basic-white);
-}
-
-.logo:active {
-  color: var(--special-bright);
-  opacity: 0.5;
 }
 
 .navigation-list {
@@ -423,7 +423,7 @@ textarea.form-input {
   display: none;
   background-color: var(--basic-extra-light);
   border-radius: 4px;
-  box-shadow: 0px 8px 16px 0px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
 }
 
 .dropdown-show .dropdown-container,
@@ -539,6 +539,7 @@ textarea.form-input {
   grid-template-columns: repeat(3, auto);
   gap: 17px;
   max-width: 290px;
+  margin: auto 0;
 }
 
 .navigation-user-item {
@@ -549,6 +550,7 @@ textarea.form-input {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: end;
   padding: 4px 14px;
   font-family: inherit;
   font-size: 14px;
@@ -580,7 +582,7 @@ textarea.form-input {
 }
 
 .user-link-search {
-  padding: 5px 0;
+  padding: 5px;
 }
 
 /*ПОИСК*/
@@ -1073,7 +1075,7 @@ textarea.form-input {
   padding: 40px 40px 42px 40px;
   border-radius: 8px;
   background-color: var(--basic-extra-light);
-  box-shadow: 0px 15px 40px 0px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 15px 40px 0 rgba(45, 52, 64, 0.12);
 }
 
 .delivery-description {
@@ -1139,7 +1141,7 @@ textarea.form-input {
   padding: 40px;
   border-radius: 8px;
   background: var(--basic-extra-light);
-  box-shadow: 0px 8px 16px 0px rgba(45, 52, 64, 0.12);
+  box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
 }
 
 .contacts-description {
@@ -1213,6 +1215,11 @@ textarea.form-input {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
+}
+
+.footer-htmlacademy-logo {
+  width: 93px;
+  height: 27px;
 }
 
 /*СТРАНИЦА КАТАЛОГА*/
