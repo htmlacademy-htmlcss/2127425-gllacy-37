@@ -74,10 +74,10 @@
 
               <!--ПОИСК-->
               <li class="navigation-user-item dropdown">
-                <a class="navigation-user-link link dropdown-link" href="#">
+                <a class="navigation-user-link link user-link-search dropdown-link" href="#">
                   <svg class="navigation-user-ico" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none">
-                    <path fill="#2D3440" fill-rule="evenodd"
+                    <path fill="currentColor" fill-rule="evenodd"
                       d="M2.66 8.19a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.44a.67.67 0 1 1-.94.95l-2.45-2.45Z"
                       clip-rule="evenodd" />
                   </svg>
@@ -99,7 +99,7 @@
                 <a class="navigation-user-link link dropdown-link" href="#">
                   <svg class="navigation-user-ico" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none">
-                    <path fill="#2D3440" fill-rule="evenodd"
+                    <path fill="currentColor" fill-rule="evenodd"
                       d="M9 2.525c0-.369.298-.667.667-.667h2.666a2 2 0 0 1 2 2v9.333a2 2 0 0 1-2 2H9.667a.667.667 0 0 1 0-1.333h2.666A.667.667 0 0 0 13 13.19V3.858a.666.666 0 0 0-.667-.667H9.667A.667.667 0 0 1 9 2.525ZM5.862 4.72c.26-.26.682-.26.943 0l3.329 3.329a.69.69 0 0 1 .129.177.664.664 0 0 1-.13.774l-3.328 3.33a.667.667 0 1 1-.943-.944l2.195-2.195h-6.39a.667.667 0 1 1 0-1.333h6.39L5.862 5.663a.667.667 0 0 1 0-.943Z"
                       clip-rule="evenodd" />
                   </svg>
@@ -118,10 +118,10 @@
                       placeholder="Ваш пароль" value="******" required>
 
                     <div class="login-wrapper">
-                      <button class="login-form-button button button-dark" type="submit">Войти</button>
+                      <button class="login-button button button-dark" type="submit">Войти</button>
                       <div class="login-wrapper-links">
-                        <a class="login-link" href="#">Забыли пароль</a>
-                        <a class="login-link" href="#">Регистрация</a>
+                        <a class="login-link link" href="#">Забыли пароль?</a>
+                        <a class="login-link link" href="#">Регистрация</a>
                       </div>
                     </div>
                   </form>
@@ -137,7 +137,7 @@
                 <a class="navigation-user-link link dropdown-link" href="#">
                   <svg class="navigation-user-ico" aria-hidden="true" focusable="false"
                     xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none">
-                    <path fill="#2D3440" fill-rule="evenodd"
+                    <path fill="currentColor" fill-rule="evenodd"
                       d="M1.1667 2.108a.6667.6667 0 0 0 0 1.3333h1.7712l.4675 2.3354a.664.664 0 0 0 .0106.053l.9674 4.8334.0001.0006a1.8257 1.8257 0 0 0 1.8183 1.4691h5.6207a1.8256 1.8256 0 0 0 1.8185-1.4697l.001-.005.9271-4.8614a.6669.6669 0 0 0-.6549-.7916H4.6107l-.4726-2.3613a.6667.6667 0 0 0-.6537-.5359H1.1667Zm4.5243 8.2944-.8134-4.064h8.2308l-.7756 4.0669a.4926.4926 0 0 1-.4918.3943v-.0002H6.1962v-.0001l-.0128.0003a.4925.4925 0 0 1-.4922-.3963l-.0002-.0009Zm-1.1336 3.961c0-.688.5577-1.2457 1.2457-1.2457.688 0 1.2457.5577 1.2457 1.2457 0 .6879-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5578-1.2457-1.2457Zm6.3733 0c0-.688.5577-1.2457 1.2457-1.2457.688 0 1.2457.5577 1.2457 1.2457 0 .6879-.5577 1.2457-1.2457 1.2457-.688 0-1.2457-.5578-1.2457-1.2457Z"
                       clip-rule="evenodd" />
                   </svg>
@@ -154,14 +154,19 @@
                   <div class="basket-content basket-content-full">
                     <h2 class="basket-title dropdown-title">Корзина</h2>
 
+
                     <ul class="basket-list list-reset">
                       <li class="basket-list-item">
                         <a class="basket-list-link link" href="#">
                           <img class="basket-list-img" src="images/basket/product-1-small.png" width="46" height="46"
                             alt="Малиновое мороженое.">
-                          <h3 class="basket-title-link">Малинка</h3>
                         </a>
-                        <p class="basket-description">1&nbsp;кг x 310&nbsp;₽</p>
+                        <div class="basket-check">
+                          <a class="basket-list-link link" href="#">
+                            <h3 class="basket-title-link">Малинка</h3>
+                          </a>
+                          <p class="basket-description">1&nbsp;кг x 310&nbsp;₽</p>
+                        </div>
                         <span class="basket-price">310&nbsp;₽</span>
                         <button class="basket-button-delete" type="button">
                           <span class="visually-hidden">Удалить из корзины</span>
@@ -171,9 +176,13 @@
                         <a class="basket-list-link link" href="#">
                           <img class="basket-list-img" src="images/basket/product-2-small.png" width="46" height="46"
                             alt="Мороженое голубого цвета Бабл-Гам.">
-                          <h3 class="basket-title-link">Бабл-Гам</h3>
                         </a>
-                        <p class="basket-description">1,5&nbsp;кг x 320&nbsp;₽</p>
+                        <div class="basket-check">
+                          <a class="basket-list-link link" href="#">
+                            <h3 class="basket-title-link">Бабл-Гам</h3>
+                          </a>
+                          <p class="basket-description">1,5&nbsp;кг x 320&nbsp;₽</p>
+                        </div>
                         <span class="basket-price">480&nbsp;₽</span>
                         <button class="basket-button-delete" type="button">
                           <span class="visually-hidden">Удалить из корзины</span>
@@ -182,7 +191,7 @@
                     </ul>
 
                     <div class="basket-place-order">
-                      <a class="basket-place-order button button-dark link" href="#">Оформить заказ</a>
+                      <a class="basket-button button button-dark link" href="#">Оформить заказ</a>
                       <span class="basket-total">Итого: 790&nbsp;₽</span>
                     </div>
 
@@ -734,7 +743,7 @@
 
         <section class="footer-htmlacademy">
           <h2 class="visually-hidden">Зайдите к нам на сайт</h2>
-          <a class="footer-htmlacademy-logo logo link" href="index.html">
+          <a class="footer-htmlacademy-logo logo link" href="https://htmlacademy.ru/">
             <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="93" height="27"
               fill="none">
               <g fill="currentColor" clip-path="url(#a)">

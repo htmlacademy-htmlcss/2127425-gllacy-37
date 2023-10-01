@@ -511,6 +511,29 @@ textarea.form-input {
   background-color: var(--special-bright);
 }
 
+.navigation-phone {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 18px 0;
+  text-align: end;
+}
+
+.navigation-phone:hover {
+  color: var(--special-bright);
+}
+
+.navigation-phone:focus,
+.navigation-phone:focus-visible {
+  color: var(--basic-white);
+}
+
+.navigation-phone:active {
+  color: var(--special-bright);
+  opacity: 0.5;
+}
+
 .navigation-user-list {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -519,7 +542,7 @@ textarea.form-input {
 }
 
 .navigation-user-item {
-  padding: 8px 0;
+  padding: 12px 0;
 }
 
 .navigation-user-link {
@@ -552,22 +575,228 @@ textarea.form-input {
   border: 2px solid transparent;
 }
 
-.navigation-phone {
+.navigation-user-link span {
+  margin-left: 6px;
+}
+
+.user-link-search {
+  padding: 5px 0;
+}
+
+/*ПОИСК*/
+
+.search {
+  right: 0;
+  width: 356px;
+  height: 96px;
+  padding: 24px 16px;
+}
+
+/*ВХОД*/
+
+.login {
+  right: 0;
+  width: 420px;
+  padding: 48px 48px 52px;
+}
+
+.login-title {
+  margin: 0 0 31px;
+}
+
+.login-input {
+  margin-bottom: 15px;
+}
+
+.login-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 22px;
+  margin-top: 18px;
+}
+
+.login-button {
+  width: 113px;
+}
+
+.login-link {
+  display: inline-block;
   font-family: inherit;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 14px;
   line-height: 20px;
+  text-decoration: underline;
+}
+
+.login-link:hover {
+  color: var(--special-bright);
+}
+
+.login-link:focus,
+.login-link:focus-visible {
+  color: var(--basic-extra-dark);
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.login-link:active {
+  color: var(--special-bright);
+  opacity: 0.5;
+}
+
+.login-link-disabled {
+  color: var(--basic-extra-dark);
+  text-decoration: none;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 /*КОРЗИНА*/
+
+.basket {
+  right: 0;
+}
+
+.basket-content {
+  display: none;
+}
+
+.basket-content-full {
+  width: 441px;
+  padding: 48px 48px 16px;
+}
+
+.basket-content-empty {
+  width: 288px;
+  padding: 48px 20px 15px;
+}
 
 .dropdown-basket-full .basket-content-full,
 .dropdown-basket-empty .basket-content-empty {
   display: block;
 }
 
-.basket-content {
-  display: none;
+.basket-button-delete {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.basket-button-delete::before,
+.basket-button-delete::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 1px;
+  background-color: var(--basic-extra-dark);
+  transform: translate(-50%, -50%);
+}
+
+.basket-button-delete::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.basket-button-delete::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.basket-button-delete:hover {
+  opacity: 0.7;
+}
+
+.basket-button-delete:focus,
+.basket-button-delete:focus-visible {
+  opacity: 0.5;
+}
+
+.basket-button-delete:active {
+  opacity: 0.3;
+}
+
+.basket-button-delete:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.basket-title {
+  margin: 0 0 32px;
+}
+
+/*заголовок к пустой корзине*/
+
+.basket-content-empty .basket-title {
+  text-align: center;
+}
+
+.basket-list {
+  padding: 0 0 5px;
+  border-bottom: 1px solid var(--basic-light);
+}
+
+.basket-list-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 0 22px;
+  gap: 16px;
+}
+
+.basket-list-link:hover {
+  opacity: 0.7;
+}
+
+.basket-list-link:focus,
+.basket-list-link:focus-visible {
+  opacity: 0.5;
+}
+
+.basket-list-link:active {
+  opacity: 0.3;
+}
+
+.basket-title-link {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.basket-description {
+  font-size: 14px;
+  color: var(--basic-neutral);
+  margin: 0;
+}
+
+.basket-price {
+  display: inline-block;
+  margin: 0 51px 0 auto;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.basket-place-order {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.basket-total {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.basket-button {
+  width: 198px;
 }
 
 /*СЛАЙДЕР*/
