@@ -430,6 +430,7 @@ textarea.form-input {
 .dropdown:hover .dropdown-container,
 .dropdown:focus-within .dropdown-container {
   display: block;
+  op
 }
 
 .dropdown-show .dropdown-link,
@@ -933,7 +934,7 @@ textarea.form-input {
 }
 
 .slider-arrow:active {
-  background-color: rgba(252, 252, 252, 0.50);
+  background-color: rgba(252, 252, 252, 0.5);
   border: transparent;
 }
 
@@ -983,7 +984,7 @@ textarea.form-input {
 }
 
 .slider-bullet:active {
-  background-color: rgba(252, 252, 252, 0.50);
+  background-color: rgba(252, 252, 252, 0.5);
   border: transparent;
 }
 
@@ -993,6 +994,10 @@ textarea.form-input {
   pointer-events: none;
 }
 
+.slider-social {
+  margin: 0 4px 0 auto;
+}
+
 /*ПОДАРКИ*/
 
 .gifts-container {
@@ -1000,12 +1005,12 @@ textarea.form-input {
 }
 
 .gifts-title {
-  margin-bottom: 55px;
+  margin: 0 0 55px;
 }
 
 .gifts-list {
   display: grid;
-  grid-template-columns: 570px 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
@@ -1015,7 +1020,7 @@ textarea.form-input {
   flex-wrap: wrap;
   gap: 28px;
   padding: 36px 217px 36px 36px;
-  background-color: #F79;
+  background-color: var(--special-neutral);
   background-repeat: no-repeat;
   background-position: right;
   border-radius: 16px;
@@ -1031,7 +1036,6 @@ textarea.form-input {
 
 .gifts-item-title {
   margin: 0;
-  font-family: inherit;
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-extra-dark);
@@ -1040,7 +1044,6 @@ textarea.form-input {
 .gifts-item-description {
   margin: 0;
   text-align: start;
-  font-family: inherit;
   font-size: 16px;
   line-height: 22px;
   color: var(--basic-extra-dark);
@@ -1053,7 +1056,7 @@ textarea.form-input {
 }
 
 .popular-title {
-  margin-bottom: 56px;
+  margin: 0 0 56px;
 }
 
 /*ПРЕИМУЩЕСТВА*/
@@ -1280,16 +1283,53 @@ textarea.form-input {
 
 .footer-page {
   display: grid;
-  grid-template-columns: 108px 356px 193px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 256px;
-  padding: 48px 0 48px;
+  padding: 48px 0;
 }
 
 .social-list {
-  display: grid;
-  justify-content: start;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  color: var(--basic-extra-light);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.3);
+  opacity: 1;
+}
+
+.social-link:hover {
+  background-color: var(--basic-extra-dark);
+  box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.5);
+}
+
+.social-link:focus,
+.social-link:focus-visible {
+  background-color: var(--basic-extra-dark);
+  box-shadow: 0 0 0 2px var(--basic-extra-dark);
+  outline: none;
+}
+
+.social-link:active {
+  background-color: var(--basic-extra-dark);
+  box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.5);
+  opacity: 0.5;
+}
+
+.social-link-disabled {
+  box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.5);
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .footer-info-list {
