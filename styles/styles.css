@@ -1382,8 +1382,8 @@ textarea.form-input {
 
 .footer-page {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 256px;
+  grid-template-columns: auto 356px auto;
+  gap: 259px;
   padding: 48px 0;
 }
 
@@ -1391,7 +1391,6 @@ textarea.form-input {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
 }
 
