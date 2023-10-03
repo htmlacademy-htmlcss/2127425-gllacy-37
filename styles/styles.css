@@ -915,7 +915,7 @@ textarea.form-input {
   cursor: pointer;
 }
 
-.button-slider-next {
+.button-slider-prev {
   transform: rotate(180deg);
 }
 
