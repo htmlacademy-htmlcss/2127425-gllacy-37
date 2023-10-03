@@ -1521,6 +1521,10 @@ textarea.form-input {
 
 /*ФИЛЬТР ТОВАРОВ*/
 
+.filter-products {
+  border-bottom: 1px solid rgb(252, 252, 252, 0.3);
+}
+
 .filter-container {
   margin-bottom: 44px;
 }
@@ -2045,18 +2049,100 @@ input[type='number'] {
 
 .product-list-more {
   display: grid;
-  grid-template-columns: 168px 179px 168px;
+  grid-template-columns: auto 179px auto;
+  align-items: center;
   gap: 328px;
   padding: 41px 0;
+  text-align: center;
 }
 
 .button-product-list {
   grid-column: 2 / span 1;
 }
 
+/*ПАГИНАЦИЯ*/
+
+.pagination-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .pagination-list {
   display: flex;
   justify-content: end;
   flex-wrap: wrap;
-  gap: 8px;
+}
+
+.pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 2px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.pagination-link:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.pagination-link:focus,
+.pagination-link:focus-visible {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 1px solid var(--basic-extra-dark);
+  outline: none;
+}
+
+.pagination-link:active {
+  background-color: rgba(252, 252, 252, 0.5);
+  border: 1px solid var(--basic-extra-light);
+}
+
+.pagination-link-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.pagination-link-current {
+  background-color: var(--basic-extra-light);
+  pointer-events: none;
+}
+
+.pagination-button {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin: 4px 8px;
+  background-color: transparent;
+  background-image: url("../images/svg/arrow.svg");
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-button-prev {
+  transform: rotate(180deg);
+}
+
+.pagination-button:hover {
+  opacity: 0.7;
+}
+
+.pagination-button:focus,
+.pagination-button:focus-visible {
+  opacity: 0.5;
+  outline: none;
+}
+
+.pagination-button:active {
+  opacity: 0.5;
+}
+
+.pagination-button:disabled,
+.pagination-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
