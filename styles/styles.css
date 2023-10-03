@@ -166,6 +166,7 @@ img {
 .logo:focus,
 .logo:focus-visible {
   color: var(--basic-white);
+  outline: none;
 }
 
 .logo:active {
@@ -230,8 +231,8 @@ img {
   height: 16px;
   background-color: currentColor;
   transform: translateY(-50%);
-  -webkit-mask-image: url("../images/spinner.svg");
-  mask-image: url("../images/spinner.svg");
+  -webkit-mask-image: url("../images/svg/spinner.svg");
+  mask-image: url("../images/svg/spinner.svg");
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -461,8 +462,8 @@ textarea.form-input {
   height: 16px;
   background-color: currentColor;
   transform: translateY(-50%);
-  -webkit-mask-image: url("../images/arrow-down.svg");
-  mask-image: url("../images/arrow-down.svg");
+  -webkit-mask-image: url("../images/svg/arrow-down.svg");
+  mask-image: url("../images/svg/arrow-down.svg");
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-repeat: no-repeat;
@@ -1186,31 +1187,57 @@ textarea.form-input {
 /*ПОДПИСКА*/
 
 .mailing {
+  border-radius: 16px;
+  padding: 6px;
+  background-color: var(--basic-white);
+  background-image: url("../images/mailing-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mailing-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
   background-color: var(--basic-white);
   border-radius: 16px;
-  padding: 32px 32px 32px 34px;
 }
 
 .mailing-description {
   margin: 0;
   margin-bottom: 42px;
+  line-height: 22px;
+  color: var(--basic-dark);
 }
 
 .mailing-form {
   display: grid;
-  grid-template-columns: 332px 1fr;
-  gap: 14px;
+  grid-template-columns: 1fr auto;
+  gap: 17px;
+  margin-top: auto;
 }
 
 /*ДОСТАВКА*/
 
+.delivery {
+  position: relative;
+  padding: 64px 64px 64px 100px;
+  background-color: var(--basic-extra-light);
+  background-image: url("../images/delivery-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  transform: scale(-1, 1);
+  border-radius: 16px;
+}
+
 .delivery-container {
+  position: relative;
   display: grid;
   grid-template-columns: 371px 1fr;
   gap: 135px;
-  background-color: #f1f1f1;
-  border-radius: 16px;
-  padding: 64px 64px 64px 100px;
+  transform: scale(-1, 1);
 }
 
 .delivery-form-tooltip {
@@ -1292,9 +1319,13 @@ textarea.form-input {
 /*КОНТАКТЫ*/
 
 .contacts {
-  background-color: #f1f1f1;
-  border-radius: 16px;
   padding: 64px 763px 64px 64px;
+  background-color: var(--basic-extra-light);
+  background-image: url("../images/contacts-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  border-radius: 16px;
 }
 
 .contacts-container {
@@ -1430,15 +1461,60 @@ textarea.form-input {
 
 .breadcrumbs-list {
   display: flex;
-  gap: 28px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .breadcrumbs-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0 8px;
+  background-image: url("../images/svg/arrow-breadcrumbs.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.breadcrumbs-link {
   font-family: inherit;
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
   margin: 0;
+}
+
+.breadcrumbs-link:hover {
+  color: var(--special-bright);
+}
+
+.breadcrumbs-link:focus,
+.breadcrumbs-link-visible {
+  color: var(--basic-white);
+  outline: none;
+}
+
+.breadcrumbs-link:active {
+  color: var(--special-bright);
+  opacity: 0.5;
+}
+
+.breadcrumbs-link-disabled {
+  color: var(--basic-extra-dark);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.breadcrumbs-link-current {
+  text-decoration: 1px solid underline;
+  text-underline-offset: 4px;
+  pointer-events: none;
+  outline: none;
 }
 
 .inner-header-title {
