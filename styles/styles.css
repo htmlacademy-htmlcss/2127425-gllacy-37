@@ -394,7 +394,6 @@ textarea.form-input {
   padding: 6px 13px;
   border: 2px solid transparent;
   border-radius: 30px;
-  transition: background-color 0.3s ease;
 }
 
 .navigation-link:hover {
@@ -914,7 +913,6 @@ textarea.form-input {
   border-radius: 50%;
   border: 2px solid var(--basic-extra-light);
   cursor: pointer;
-  transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
 }
 
 .button-slider-next {
@@ -964,7 +962,6 @@ textarea.form-input {
   border: 1px solid transparent;
   background-color: rgba(252, 252, 252, 0.3);
   cursor: pointer;
-  transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
 }
 
 .slider-bullet-current {
@@ -1528,53 +1525,367 @@ textarea.form-input {
   margin-bottom: 44px;
 }
 
-.sorting-container {
-  display: grid;
-  width: 823px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 24px;
-  align-items: center;
+.filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
-.catalog-filter-group {
-  border: none;
+.filter-group {
+  margin: 0 24px 15px 0;
   padding: 0;
+  border: none;
 }
 
-.filter-group-fat {
-  grid-column: 3 / span 2;
-}
-
-.filter-group-fillers {
-  grid-column: 1 / span 3;
-}
-
-.catalog-filter-title {
+.filter-title {
   font-family: inherit;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  margin: 0;
-  margin-bottom: 8px;
+  margin: 0 0 8px 16px;
+  color: var(--basic-extra-dark);
 }
 
-.catalog-filter-list {
+.filter-sort {
+  width: 196px;
+  height: 36px;
+  padding: 0 40px 0 14px;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--basic-extra-dark);
+  text-transform: lowercase;
+  background-color: rgba(252, 252, 252, 0.3);
+  background-image: url("../images/svg/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center right 10px;
+  background-size: 16px 16px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.filter-sort:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.filter-sort:focus,
+.filter-sort:focus-visible {
+  background-color: rgba(252, 252, 252, 0.4);
+  border-color: var(--basic-extra-light);
+  outline: none;
+}
+
+.filter-sort:disabled {
+  background-color: var(--basic-neutral);
+  pointer-events: none;
+}
+
+.filter-range-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.filter-range-input {
+  width: 30px;
+  margin: 0 -4px 0 -2px;
+  padding: 0;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: var(--basic-extra-dark);
+  background-color: transparent;
+  border: none;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.filter-range-input::-webkit-outer-spin-button,
+.filter-range-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.filter-range-input:hover {
+  color: var(--special-bright);
+  outline: none;
+}
+
+.filter-range-input:focus,
+.range-input:focus-visible {
+  color: var(--basic-white);
+  outline: none;
+}
+
+.filter-range-input:active {
+  color: var(--special-bright);
+  opacity: 0.5;
+}
+
+.filter-range-input:disabled {
+  color: var(--basic-extra-dark);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.filter-range {
+  width: 196px;
+  height: 36px;
+  padding: 10px 16px;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 20px;
+}
+
+.filter-range-scale {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 164px;
+  height: 2px;
+  background-color: rgba(86, 92, 102, 0.3);
+  transform: translate(-50%, -50%);
+}
+
+.filter-rage-bar {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background-color: var(--basic-dark);
+  transform: translateY(-50%);
+}
+
+.filter-range-toggle {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background-color: var(--basic-extra-dark);
+  border: none;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.filter-range-toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background-color: var(--basic-extra-light);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filter-range-toggle-min {
+  left: 0;
+}
+
+.filter-range-toggle-max {
+  right: 0;
+}
+
+.filter-range-toggle:hover {
+  background-color: var(--basic-extra-light);
+}
+
+.filter-range-toggle:hover::after {
+  background-color: var(--basic-extra-dark);
+}
+
+.filter-range-toggle:focus-visible {
+  background-color: var(--basic-extra-light);
+  box-shadow: 0 0 0 2px var(--basic-extra-dark);
+  outline: none;
+}
+
+.filter-range-toggle:focus-visible::after {
+  background-color: var(--basic-extra-dark);
+}
+
+.filter-range-toggle:active {
+  background-color: var(--basic-extra-dark);
+  border: none;
+}
+
+.filter-range-toggle:active::after {
+  background-color: var(--basic-extra-dark);
+}
+
+.filter-range-toggle:disabled {
+  background-color: var(--basic-neutral);
+  pointer-events: none;
+}
+
+.filter-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
+  align-items: center;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 18px;
+  padding: 9px 24px;
+  gap: 17px;
 }
 
-.control-label {
-  font-family: inherit;
+.filter-item {
+  display: flex;
+  align-items: center;
+}
+
+.filter-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
 }
 
-.catalog-filter-button {
+.filter-input {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  background-color: transparent;
+  border: 1px solid var(--basic-extra-dark);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: background-color 0.2s ease-in, border-color 0.2s ease-in;
+}
+
+.filter-radio {
+  border-radius: 50%;
+}
+
+.filter-radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 6px;
+  height: 6px;
+  background-color: var(--basic-extra-dark);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filter-radio:checked::before {
+  display: block;
+}
+
+.filter-radio:hover {
+  border-color: var(--basic-extra-light);
+}
+
+.filter-radio:hover::before {
+  background-color: var(--basic-extra-light);
+}
+
+.filter-radio:focus,
+.filter-radio:focus-visible {
+  border-color: var(--basic-extra-light);
+  outline: none;
+}
+
+.filter-radio:focus::before,
+.filter-radio:focus-visible::before {
+  background-color: var(--basic-extra-light);
+}
+
+.filter-radio:active {
+  border: 1px solid var(--basic-extra-dark);
+  opacity: 0.5;
+}
+
+.filter-radio:disabled {
+  border: 1px solid var(--basic-extra-dark);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.filter-radio:disabled::before {
+  background-color: var(--basic-extra-dark);
+}
+
+.filter-checkbox {
+  border: transparent;
+}
+
+.filter-checkbox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--basic-extra-dark);
+  -webkit-mask-image: url("../images/svg/checkbox-unchecked.svg");
+  mask-image: url("../images/svg/checkbox-unchecked.svg");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.filter-checkbox:checked:before {
+  -webkit-mask-image: url("../images/svg/checkbox-check-on.svg");
+  mask-image: url("../images/svg/checkbox-check-on.svg");
+}
+
+.filter-checkbox:hover::before {
+  background-color: var(--basic-extra-light);
+}
+
+.filter-checkbox:focus,
+.filter-checkbox:focus-visible {
+  outline: none;
+}
+
+.filter-checkbox:focus::before,
+.filter-checkbox:focus-visible::before {
+  background-color: var(--basic-extra-light);
+}
+
+.filter-checkbox:active::before {
+  background-color: var(--basic-extra-dark);
+  opacity: 0.5;
+}
+
+.filter-checkbox:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.filter-checkbox:disabled::before {
+  background-color: var(--basic-extra-dark);
+  opacity: 0.5;
+}
+
+.filter-button {
+  width: 185px;
+  margin: 0 0 16px -6px;
+  padding: 8px;
   font-size: 14px;
+  line-height: 20px;
 }
 
 /*КАТАЛОГ ТОВАРОВ*/
