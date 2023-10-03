@@ -1537,7 +1537,7 @@ textarea.form-input {
 }
 
 .filter-container {
-  margin-bottom: 44px;
+  margin-bottom: 31px;
 }
 
 .filter-wrapper {
@@ -1757,6 +1757,10 @@ input[type='number'] {
   gap: 17px;
 }
 
+.filter-list-fat {
+  gap: 13px;
+}
+
 .filter-item {
   display: flex;
   align-items: center;
@@ -1906,13 +1910,13 @@ input[type='number'] {
 /*КАТАЛОГ ТОВАРОВ*/
 
 .product-container-catalog {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .product-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px 30px;
+  gap: 39px 30px;
 }
 
 .product-item {
@@ -2017,6 +2021,19 @@ input[type='number'] {
   color: var(--basic-extra-dark);
 }
 
+.product-list-more {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 309px;
+  padding: 55px 0;
+}
+
+.product-list-button {
+  width: 179px;
+  grid-column: 2 / span 1;
+}
+
 .product-button {
   display: flex;
   justify-content: center;
@@ -2056,19 +2073,6 @@ input[type='number'] {
   background-color: var(--basic-neutral);
   border: 2px solid transparent;
   pointer-events: none;
-}
-
-.product-list-more {
-  display: grid;
-  grid-template-columns: auto 179px auto;
-  align-items: center;
-  gap: 328px;
-  padding: 41px 0;
-  text-align: center;
-}
-
-.button-product-list {
-  grid-column: 2 / span 1;
 }
 
 /*ПАГИНАЦИЯ*/
@@ -2136,6 +2140,10 @@ input[type='number'] {
 
 .pagination-button-prev {
   transform: rotate(180deg);
+}
+
+.pagination-button-next {
+  margin-right: 0;
 }
 
 .pagination-button:hover {
