@@ -424,6 +424,7 @@ textarea.form-input {
   background-color: var(--basic-extra-light);
   border-radius: 4px;
   box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
+  padding: 16px 0 8px;
 }
 
 .dropdown-show .dropdown-container,
@@ -473,7 +474,6 @@ textarea.form-input {
 .dropdown-catalog {
   left: 0;
   width: 135px;
-  padding: 16px 0 8px;
 }
 
 .dropdown-catalog-title {
@@ -928,7 +928,7 @@ textarea.form-input {
   cursor: pointer;
 }
 
-.button-slider-prev {
+.slider-arrow-prev {
   transform: rotate(180deg);
 }
 
@@ -1461,9 +1461,10 @@ textarea.form-input {
 /*ПОДВАЛ*/
 
 .footer-page {
-  display: grid;
-  grid-template-columns: auto 356px auto;
-  gap: 259px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 48px 0;
 }
 
@@ -1511,19 +1512,49 @@ textarea.form-input {
 
 .footer-info-list {
   display: grid;
-  grid-template-columns: 150px 182px;
-  gap: 8px 24px;
+  grid-template-columns: repeat(2, auto);
+  gap: 5px 3px;
+  margin: 0 auto;
+  justify-content: end;
 }
 
-.footer-info-item {
-  font-family: inherit;
+.footer-info-link {
+  display: inline-block;
   font-size: 14px;
-  font-weight: 400;
   line-height: 20px;
 }
 
-.footer-info-item-suppliers {
+.footer-info-link-suppliers {
+  display: flex;
+  align-items: center;
   font-weight: 700;
+  color: var(--basic-extra-dark);
+}
+
+.footer-info-link:hover {
+  color: var(--special-bright);
+}
+
+.footer-info-link:focus,
+.footer-info-link:focus-visible {
+  color: var(--basic-extra-light);
+  outline: none;
+}
+
+.footer-info-link:active {
+  color: var(--basic-extra-light);
+  opacity: 0.5;
+}
+
+.footer-link {
+  margin-left: 22px;
+}
+
+.footer-info-link svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
 }
 
 .footer-htmlacademy-description {
@@ -2161,13 +2192,13 @@ input[type='number'] {
 .pagination-item {
   display: flex;
   flex-wrap: wrap;
-  grid-row: 1 / 2;
 }
 
 .pagination-list {
   display: flex;
   justify-content: end;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .pagination-link {
@@ -2175,8 +2206,7 @@ input[type='number'] {
   justify-content: center;
   align-items: center;
   min-width: 24px;
-  height: 24px;
-  padding: 2px;
+  min-height: 24px;
   border: 1px solid transparent;
   border-radius: 50%;
 }
