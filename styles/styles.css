@@ -1531,6 +1531,7 @@ textarea.form-input {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
+  margin-top: 14px;
 }
 
 .footer-htmlacademy-logo {
@@ -1684,7 +1685,7 @@ textarea.form-input {
 }
 
 .filter-range-input {
-  width: 30px;
+  width: 26px;
   margin: 0 -4px 0 -2px;
   padding: 0;
   font-family: var(--font-inter);
@@ -1837,7 +1838,7 @@ input[type='number'] {
 }
 
 .filter-list-fat {
-  gap: 13px;
+  gap: 17px;
 }
 
 .filter-item {
@@ -2100,19 +2101,6 @@ input[type='number'] {
   color: var(--basic-extra-dark);
 }
 
-.product-list-more {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 309px;
-  padding: 55px 0;
-}
-
-.product-list-button {
-  width: 179px;
-  grid-column: 2 / span 1;
-}
-
 .product-button {
   display: flex;
   justify-content: center;
@@ -2154,11 +2142,26 @@ input[type='number'] {
   pointer-events: none;
 }
 
+.product-list-more {
+  display: grid;
+  grid-template-columns: auto minmax(auto, 220px);
+  gap: 282px;
+  align-items: center;
+  justify-content: end;
+  padding: 55px 0;
+}
+
+.product-list-button {
+  width: 179px;
+  grid-row: 1 / 2;
+}
+
 /*ПАГИНАЦИЯ*/
 
 .pagination-item {
   display: flex;
   flex-wrap: wrap;
+  grid-row: 1 / 2;
 }
 
 .pagination-list {

@@ -233,7 +233,7 @@
                 <h2 class="visually-hidden">Фильтр товаров</h2>
 
                 <fieldset class="filter-group select-control-products">
-                  <h3 class="filter-title">Сортировка:</h3>
+                  <h3 class="filter-title filter-title-sort">Сортировка:</h3>
 
                   <select class="filter-sort" name="select-sort" aria-label="Сортировка">
                     <option class="filter-sort" value="popular" selected>По популярности</option>
@@ -244,15 +244,15 @@
 
                 <fieldset class="filter-group filter-group-price">
                   <div class="filter-range-container">
-                    <h3 class="filter-title">Цена:&nbsp;</h3>
+                    <h3 class="filter-title filter-title-price">Цена:&nbsp;</h3>
                     <label class="filter-label" for="range-min">
                       <input class="filter-range-input range-input-min" id="range-min" type="number" value="100"
-                        name="min-price">&nbsp;₽
+                        name="min-price">₽
                     </label>
                     <span>&nbsp;–&nbsp;</span>
                     <label class="filter-label" for="range-max">
                       <input class="filter-range-input range-input-max" id="range-max" type="number" value="500"
-                        name="max-price">&nbsp;₽
+                        name="max-price">₽
                     </label>
                   </div>
 
@@ -276,25 +276,25 @@
                     <li class="filter-item">
                       <label class="filter-label">
                         <input class="filter-input filter-radio" type="radio" name="percentage-fat">
-                        <span class="filter-label-name">0&nbsp;%</span>
+                        <span class="filter-label-name">0%</span>
                       </label>
                     </li>
                     <li class="filter-item">
                       <label class="filter-label">
                         <input class="filter-input filter-radio" type="radio" name="percentage-fat" checked>
-                        <span class="filter-label-name">до 10&nbsp;%</span>
+                        <span class="filter-label-name">до 10%</span>
                       </label>
                     </li>
                     <li class="filter-item">
                       <label class="filter-label">
                         <input class="filter-input filter-radio" type="radio" name="percentage-fat">
-                        <span class="filter-label-name">до 30&nbsp;%</span>
+                        <span class="filter-label-name">до 30%</span>
                       </label>
                     </li>
                     <li class="filter-item">
                       <label class="filter-label">
-                        <input class="filter-input filter-radio" type="radio" name="percentage-fat" checked>
-                        <span class="filter-label-name">выше 30&nbsp;%</span>
+                        <input class="filter-input filter-radio" type="radio" name="percentage-fat">
+                        <span class="filter-label-name">выше 30%</span>
                       </label>
                     </li>
                   </ul>
