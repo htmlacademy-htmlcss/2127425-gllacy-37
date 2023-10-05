@@ -535,6 +535,12 @@ textarea.form-input {
   opacity: 0.5;
 }
 
+.navigation-phone-disabled {
+  color: var(--basic-dark);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .navigation-user-list {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -1379,11 +1385,11 @@ textarea.form-input {
 /*КОНТАКТЫ*/
 
 .contacts {
-  padding: 64px 763px 64px 64px;
-  background-color: var(--basic-extra-light);
+  padding: 64px;
+  background-color: var(--basic-light);
   background-image: url("../images/contacts-background.jpg");
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: right;
   background-size: cover;
   border-radius: 16px;
 }
@@ -1393,8 +1399,9 @@ textarea.form-input {
   width: 343px;
   padding: 40px;
   border-radius: 8px;
-  background: var(--basic-extra-light);
   box-shadow: 0 8px 16px 0 rgba(45, 52, 64, 0.12);
+  font-family: inherit;
+  color: var(--basic-extra-dark);
 }
 
 .contacts-description {
@@ -1403,31 +1410,52 @@ textarea.form-input {
   font-weight: 400;
   line-height: 22px;
   color: var(--basic-dark);
-  margin: 0;
-  margin-bottom: 12px;
+  margin: 0 0 12px;
 }
 
 .contacts-address,
 .contacts-phone-link {
-  font-family: inherit;
   font-size: 20px;
   font-weight: 700;
-  font-style: normal;
   line-height: 24px;
-  color: var(--basic-extra-dark);
+  color: inherit;
   margin: 0;
+}
+
+.contacts-phone-link:hover {
+  color: var(--special-bright);
+}
+
+.contacts-phone-link:focus,
+.contacts-phone-link:focus-visible {
+  color: var(--basic-dark);
+  outline: none;
+}
+
+.contacts-phone-link:active {
+  color: var(--special-bright);
+  opacity: 0.5;
+}
+
+.contacts-phone-link-disabled {
+  color: var(--basic-dark);
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .contacts-address {
   margin-bottom: 24px;
+  font-style: normal;
 }
 
 .contacts-reference {
-  font-family: inherit;
   font-size: 14px;
   line-height: 20px;
-  margin: 0;
-  margin-bottom: 30px;
+  margin: 0 0 32px;
+}
+
+.contacts-button {
+  margin: 0 0 2px;
 }
 
 /*ПОДВАЛ*/
