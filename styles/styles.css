@@ -509,6 +509,7 @@ textarea.form-input {
 .dropdown-catalog-link-current {
   color: var(--basic-extra-light);
   background-color: var(--special-bright);
+  pointer-events: none;
 }
 
 .navigation-phone {
