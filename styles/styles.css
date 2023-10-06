@@ -1060,6 +1060,10 @@ textarea.form-input {
   color: var(--basic-extra-dark);
 }
 
+.gifts-button {
+  text-decoration: none;
+}
+
 /*ПОПУЛЯРНОЕ(КАТАЛОГ)*/
 
 .popular-container {
@@ -1569,6 +1573,105 @@ textarea.form-input {
   width: 93px;
   height: 27px;
 }
+
+/*МОДАЛЬНОЕ ОКНО*/
+
+.modal-window {
+  z-index: 30;
+  width: 570px;
+  padding: 0;
+  background-color: var(--basic-extra-light);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 15px 40px 0 rgb(45, 52, 64, 0.12);
+}
+
+.modal-window::backdrop {
+  background-color: var(--basic-extra-dark);
+  opacity: 0.3;
+}
+
+.modal-auth {
+  position: relative;
+  padding: 64px 64px 66px 64px;
+}
+
+.button-modal-close {
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button-modal-close::after,
+.button-modal-close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12.6px;
+  height: 1px;
+  background-color: #000;
+  transform: translate(-50%, -50%);
+}
+
+.button-modal-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.button-modal-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.button-modal-close:hover {
+  opacity: 0.6;
+}
+
+.button-modal-close:active {
+  opacity: 0.3;
+}
+
+.modal-title {
+  margin: 0 0 17px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: start;
+}
+
+.modal-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding-top: 15px;
+}
+
+.modal-form textarea {
+  height: 149px;
+}
+
+.modal-button {
+  width: 152px;
+  margin-top: 16px;
+  margin-left: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*СТРАНИЦА КАТАЛОГА*/
 
