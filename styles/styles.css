@@ -1576,7 +1576,7 @@ textarea.form-input {
 
 /*МОДАЛЬНОЕ ОКНО*/
 
-.modal-window {
+.modal-container {
   z-index: 30;
   width: 570px;
   padding: 0;
@@ -1586,9 +1586,8 @@ textarea.form-input {
   box-shadow: 0 15px 40px 0 rgb(45, 52, 64, 0.12);
 }
 
-.modal-window::backdrop {
-  background-color: var(--basic-extra-dark);
-  opacity: 0.3;
+.modal-container::backdrop {
+  background-color: rgba(45, 52, 64, 0.3);
 }
 
 .modal-auth {
@@ -1596,7 +1595,7 @@ textarea.form-input {
   padding: 64px 64px 66px 64px;
 }
 
-.button-modal-close {
+.modal-button-close {
   position: absolute;
   top: 27px;
   right: 27px;
@@ -1608,31 +1607,31 @@ textarea.form-input {
   cursor: pointer;
 }
 
-.button-modal-close::after,
-.button-modal-close::before {
+.modal-button-close::after,
+.modal-button-close::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 12.6px;
+  width: 15px;
   height: 1px;
   background-color: #000;
   transform: translate(-50%, -50%);
 }
 
-.button-modal-close::before {
+.modal-button-close::before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.button-modal-close::after {
+.modal-button-close::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.button-modal-close:hover {
+.modal-button-close:hover {
   opacity: 0.6;
 }
 
-.button-modal-close:active {
+.modal-button-close:active {
   opacity: 0.3;
 }
 
