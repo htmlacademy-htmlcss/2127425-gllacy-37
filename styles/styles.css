@@ -2009,7 +2009,8 @@ textarea.form-input {
 }
 
 .filter-list-fat {
-  gap: 17px;
+  gap: 13px;
+  padding: 9px 24px;
 }
 
 .filter-item {
@@ -2029,7 +2030,7 @@ textarea.form-input {
 }
 
 .filter-group-price .filter-label {
-  gap: 5px;
+  gap: 3px;
 }
 
 .filter-input {
@@ -2317,32 +2318,33 @@ textarea.form-input {
   pointer-events: none;
 }
 
-.product-list-more {
+/*ПАГИНАЦИЯ*/
+
+.pagination {
   display: grid;
-  grid-template-columns: auto minmax(auto, 220px);
-  gap: 282px;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  justify-content: end;
   padding: 55px 0;
 }
 
-.product-list-button {
+.pagination-button {
+  grid-column: 2 / span 1;
   width: 179px;
-  grid-row: 1 / 2;
+  margin: 0 0 0 98px;
 }
 
-/*ПАГИНАЦИЯ*/
-
-.pagination-item {
+.pagination-container {
   display: flex;
+  gap: 8px;
   flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
 }
 
 .pagination-list {
   display: flex;
-  justify-content: end;
   flex-wrap: wrap;
-  align-items: center;
+  justify-content: end;
 }
 
 .pagination-link {
@@ -2351,6 +2353,8 @@ textarea.form-input {
   align-items: center;
   min-width: 24px;
   min-height: 24px;
+  padding: 0 2px;
+
   border: 1px solid transparent;
   border-radius: 50%;
 }
@@ -2381,12 +2385,13 @@ textarea.form-input {
   pointer-events: none;
 }
 
-.pagination-button {
-  display: inline-block;
+.pagination-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 16px;
   height: 16px;
   padding: 0;
-  margin: 4px 8px;
   background-color: transparent;
   background-image: url("../images/svg/arrow.svg");
   background-repeat: no-repeat;
@@ -2394,30 +2399,26 @@ textarea.form-input {
   cursor: pointer;
 }
 
-.pagination-button-prev {
+.pagination-arrow-prev {
   transform: rotate(180deg);
 }
 
-.pagination-button-next {
-  margin-right: 0;
-}
-
-.pagination-button:hover {
+.pagination-arrow:hover {
   opacity: 0.7;
 }
 
-.pagination-button:focus,
-.pagination-button:focus-visible {
-  opacity: 0.5;
+.pagination-arrow:focus,
+.pagination-arrow:focus-visible {
   outline: none;
-}
-
-.pagination-button:active {
   opacity: 0.5;
 }
 
-.pagination-button:disabled,
-.pagination-button-disabled {
+.pagination-arrow:active {
+  opacity: 0.5;
+}
+
+.pagination-arrow:disabled,
+.pagination-arrow-disabled {
   opacity: 0.3;
   pointer-events: none;
 }
