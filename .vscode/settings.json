@@ -6,6 +6,7 @@
   },
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.guides.bracketPairs": "active",
+  "editor.formatOnSave": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
@@ -19,5 +20,7 @@
   "css.lint.unknownVendorSpecificProperties": "warning",
   "css.lint.zeroUnits": "error",
   "html.format.endWithNewline": true,
-  "html.format.indentInnerHtml": true
+  "html.format.indentInnerHtml": true,
+  "cSpell.language": "en,ru",
+  "liveServer.settings.CustomBrowser": "chrome:PrivateMode"
 }
