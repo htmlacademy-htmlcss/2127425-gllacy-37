@@ -1093,7 +1093,7 @@ textarea.form-input {
 .advantages-container {
   text-align: center;
   border-radius: 16px;
-  background-image: url("../images/waffle.png");
+  background-image: url("../images/advantages-background.png");
   background-color: var(--basic-white);
   background-repeat: no-repeat;
   background-size: cover;
